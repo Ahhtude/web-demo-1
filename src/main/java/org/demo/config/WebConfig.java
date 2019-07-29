@@ -1,4 +1,4 @@
-package org.demo;
+package org.demo.config;
 
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -11,11 +11,12 @@ import java.util.List;
 
 @EnableWebMvc
 @Configuration
-@ComponentScan(basePackages = "org.demo.web")
+@ComponentScan(basePackages = "org.demo.controllers")
 public class WebConfig implements WebMvcConfigurer {
 
     public void extendMessageConverters(List<HttpMessageConverter<?>> converters) {
         converters.add(new MappingJackson2XmlHttpMessageConverter());
     }
+
 
 }

@@ -1,4 +1,4 @@
-package org.demo.web;
+package org.demo.controllers;
 
 import org.demo.response.BaseResponse;
 import org.demo.response.ErrorResponse;
